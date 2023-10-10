@@ -229,3 +229,98 @@ const dataArray230all = dataArray30.concat(dataArray230)
 console.log(dataArray230all)
 
 console.groupEnd()
+
+console.groupCollapsed('Namų darbas 2-tra dalis')
+// Dirbti su šiuo masyvu:
+// [4, 5, -5556, 155, 640, '15x', 6789, -5564, 478, 654, 'obuolys', 789, -51, 55, -222, 0, -357, -56, 'trylika', 444, 7778, 4154, 4751];
+
+const array = [4, 5, -5556, 155, 640, '15x', 6789, -5564, 478, 654, 'obuolys', 789, -51, 55, -222, 0, -357, -56, 'trylika', 444, 7778, 4154, 4751]
+// masyvas    1  2    3     4    5     6      7      8    9    10      11      12   13  14    15  16   17   18      19      20   21     22   23
+// Slice (+) 0 1  2      3    4    5      6     7      8    9    10         11   12  13   14    15 16    17   18         19   20    21    22    23        27   
+
+// Slice (+)-23-22-21   -20  -19  -18    -17   -16    -15  -14  -13        -12  -11 -10   -9   -8  -7    -6   -5         -4   -3    -2    -1     0
+
+// 1. Dirbant su šiuo masyvu eilės tvarka atlikti žemiau pateiktas užduotis. Naudoti metodus: pop, push, shift, unshift, splice.
+// 1.1. Pašalinti pirmą masyvo narį.
+let task11 = array.shift()
+
+console.log(task11)
+console.log("Modified Array:", array);
+
+// 1.2. Pašalinti paskutinį masyvo narį.
+let task12 =array.pop()
+
+console.log(task12)
+console.log("Modified Array:", array);
+
+// 1.3. Rasti vidurinį masyvo narį ir jį pašalinti.
+function removeMiddleElement(array) {
+let middleIndex;
+    if (array.length % 2 === 1) {
+        middleIndex = Math.floor(array.length / 2);
+    } else {
+        middleIndex = array.length / 2 - 1; 
+    }
+
+    const removedElement = array.splice(middleIndex, 1);
+
+    return {
+        removedElement: removedElement[0], // Return the removed element
+        newArray: array // Return the modified array
+    };
+}
+
+// Example usage
+const originalArray = [5, -5556, 155, 640, '15x', 6789, -5564, 478, 654, 'obuolys', 789, -51, 55, -222, 0, -357, -56, 'trylika', 444, 7778, 4154]
+const result = removeMiddleElement(originalArray);
+
+console.log("Removed Element:", result.removedElement);
+console.log("Modified Array:", result.newArray);
+// 1.4. Pašalinti priešpaskutinį masyvo narį.
+const penultimateIndex = array.length - 2;
+array.splice(penultimateIndex, 1);
+
+console.log("Modified Array:", array);
+
+// 1.5. Pašalinti antrą masyvo narį.
+const indexToRemove = 1; 
+array.splice(indexToRemove, 1);
+
+console.log("Modified Array:", array);
+
+// 1.6. Pašalinti 7 ir 8 masyvo narius.
+const startIndex = 7;
+const elementsToRemove = 2; 
+array.splice(startIndex, elementsToRemove);
+
+console.log("Modified Array:", array);
+
+// 1.7. Pašalinti 4, 5 ir 6 masyvo narius skaičiuojant nuo galo.
+const startIndex1 = 4;
+const elementsToRemove1 = array.length - startIndex;
+array.splice(startIndex1, elementsToRemove1);
+
+console.log("Modified Array:", array);
+// 1.8. Pašalinti trečią masyvo narį ir į jo vietą įdėti skaičių 888.
+array.splice(2, 1, 888);
+
+console.log("Modified Array:", array);
+
+// 1.9. Pašalinti dešimtą masyvo narį ir į jo vietą įdėti skaičius: 33, 789 ir 6543.
+// 1.10. Pašalinti paskutinį masyvo narį į jo vietą įdėti skaičius: 321, 654, 987.
+// 1.11. Tarp pirmo ir antro masyvo narių įdėti skaičių 11.
+// 1.12. Tarp 13 ir 14 masyvo narių įdėti skaičių 1.
+// 1.13. Tarp paskutinio ir priešpaskutinio masyvo narių įdėti skaičių -1.
+// 1.14. Į masyvo pradžią pridėti skaičius: 1, 2, 3.
+// 1.15. Į masyvo pabaigą pridėti skaičius: -333, -321, -312.
+// 1.16. Į masyvo vidurį pridėti skaičių 0.
+// 1.17. Pašalinti pirmą masyvo narį.
+// 1.18. Pašalinti paskutinį masyvo narį.
+// 1.19. Į masyvo pradžią pridėti žodį "start".
+// 1.20. Į masyvo pabaigą pridėti žodį "end".
+
+// Atlikus šias užduotis eilės tvarka masyvas turėtų atrodyti taip:
+// ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+
+
+console.groupEnd()
