@@ -1,3 +1,5 @@
+console.groupCollapsed('Masyvų teorija')
+
 // Masyvai / arrays
 const numsArray = [5, 500, -5, 57.5, 4534, 4444]
 // Indeksai        0   1    2    3     4    5
@@ -13,12 +15,12 @@ console.log(numsArray.length)
 // console.log(numsArray[5])
 
 for (let i = 0; i < numsArray.length; i++) {
-  console.log(numsArray[i])
+    console.log(numsArray[i])
 }
 
 const newArr = ['Vienas', 'Du', 5, true, [1, 2, 5]]
 // Indeksai        0       1    2    3       4
-                                       // 0  1  2
+// 0  1  2
 
 console.log(newArr)
 console.log(newArr[0])
@@ -112,6 +114,9 @@ console.log(slicedCountries11)
 const slicedCountries12 = countries.slice(4, 2)
 console.log(slicedCountries12)
 
+console.groupEnd()
+
+console.groupCollapsed('Namų darbas 1-ma dalis')
 
 // ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
 
@@ -151,25 +156,76 @@ console.log(dataArray8)
 const dataArray9 = dataArray.slice(24, 27)
 console.log(dataArray9)
 // 2.10. Gauti pirmus 10 masyvo narius.
+const dataArray10 = dataArray.slice(0, 10)
+console.log(dataArray10)
 // 2.11. Gauti paskutinius 10 masyvo narius.
+const dataArray11 = dataArray.slice(-10)
+console.log(dataArray11)
 // 2.12. Gauti nuo 3 iki 8 masyvo nario (iš viso 6 nariai).
+const dataArray12 = dataArray.slice(2, 8)
+console.log(dataArray12)
 // 2.13. Gauti nuo 5 iki 9 masyvo nario skaičiuojant nuo masyvo pabaigos (iš viso 5 nariai).
+const dataArray13 = dataArray.slice(4, 9)
+console.log(dataArray13)
 // 2.14. Gauti nuo 11 iki 19 masyvo nario (iš viso 9 nariai).
+const dataArray14 = dataArray.slice(10, 19)
+console.log(dataArray14)
 // 2.15. Gauti nuo 9 iki 17 masyvo nario skaičiuojant nuo masyvo pabaigos (iš viso 9 nariai).
+const dataArray15 = dataArray.slice(-20, -8)
+console.log(dataArray15)
 // 2.16. Gauti visus masyvo narius išskyrus pirmą.
+const dataArray16 = dataArray.slice(1)
+console.log(dataArray16)
 // 2.17. Gauti visus masyvo narius išskyrus paskutinį.
+const dataArray17 = dataArray.slice(0, -1)
+console.log(dataArray17)
 // 2.18. Gauti visus masyvo narius išskyrus pirmus 5.
+const dataArray18 = dataArray.slice(5)
+console.log(dataArray18)
 // 2.19. Gauti visus masyvo narius išskyrus paskutinius 5.
+const dataArray19 = dataArray.slice(0, -5)
+console.log(dataArray19)
 // 2.20. Gauti visus masyvo narius iki vidurinio masyvo nario, vidurinio nario neįskaičiuojant (iš viso 13 narių).
+const dataArray20 = dataArray.slice(0, 13)
+console.log(dataArray20)
 // 2.21. Gauti visus masyvo narius nuo vidurinio masyvo nario, vidurinio nario neįskaičiuojant, iki pabaigos (iš viso 13 narių).
+const dataArray21 = dataArray.slice(14, 27);
+console.log(dataArray21)
 // 2.22. Gauti visus narius išskyrus pirmą ir paskutinį.
+const dataArray22 = dataArray.slice(1, -1);
+console.log(dataArray22)
 // 2.23. Gauti visus narius išskyrus pirmus penkis ir paskutinius tris.
+const dataArray23 = dataArray.slice(5, -3);
+console.log(dataArray23)
 // 2.24. Gauti visus narius išskyrus pirmą ir paskutinius 8.
+const dataArray24 = dataArray.slice(1, -8);
+console.log(dataArray24)
 // 2.25. Gauti visus narius išskyrus pirmus 7 ir paskutinį.
+const dataArray25 = dataArray.slice(7, -1);
+console.log(dataArray25)
 // 2.26. Gauti visus narius išskyrus pirmus 9 ir paskutinius 12.
+const dataArray26 = dataArray.slice(9, -12);
+console.log(dataArray26)
 // 2.27. Gauti 9 narius skaičiuojant nuo 11.
+const dataArray27 = dataArray.slice(10, 10 + 9);
+console.log(dataArray27)
 // 2.28. Gauti 12 narių skaičiuojant nuo 8.
+const dataArray28 = dataArray.slice(7, 7 + 12);
+console.log(dataArray28)
 // 2.29. Gauti pirmus penkis ir paskutinius šešis masyvo narius. Šiuos narius gauti viename masyve. Reikės atlikti daugiau veiksmų nei prieš tai uždaviniuose.
-// 2.30. Gauti masyvo narius nuo 3 iki 5 ir nuo 15 iki 17. Šiuos narius gauti viename masyve. Reikės atlikti daugiau veiksmų nei prieš tai uždaviniuose.
+const dataArray29 = dataArray.slice(0, 5)
+console.log(dataArray29)
+const dataArray229 = dataArray.slice(-6)
+console.log(dataArray229)
+const dataArray229all = dataArray29.concat(dataArray229)
+console.log(dataArray229all)
 
-const data = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+// 2.30. Gauti masyvo narius nuo 3 iki 5 ir nuo 15 iki 17. Šiuos narius gauti viename masyve. Reikės atlikti daugiau veiksmų nei prieš tai uždaviniuose.
+const dataArray30 = dataArray.slice(2, 5)
+console.log(dataArray30)
+const dataArray230 = dataArray.slice(14, 17)
+console.log(dataArray230)
+const dataArray230all = dataArray30.concat(dataArray230)
+console.log(dataArray230all)
+
+console.groupEnd()
