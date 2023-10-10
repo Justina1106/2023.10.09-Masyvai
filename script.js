@@ -118,6 +118,7 @@ console.log(slicedCountries12)
 const dataArray = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
 // Slice (+)      0       1  2  3  4   5    6     7     8     9      10         11   12  13 14  15   16    17 18         19   20   21   22  23   24    25    26     27   
 
+// Slice (+)      -27   -26 -25-24-23 -22  -21   -20   -19   -18    -17        -16  -15 -14-13 -12  -11   -10-9         -8   -7    -6   -5  -4   -3    -2    -1     0
 // 2. Tęsiant darbą su šiuo masyvu atlikti šias užduotis naudojant slice metodą. Kiekvienai užduočiai sukurti naują kintamąjį, jame išsaugoti reikšmę, kurią grąžina slice metodas, ir šį kintamąjį išvesti į konsolę:
 // 2.1. Gauti pirmą masyvo narį.
 const dataArray1 = dataArray.slice(0, 1)
@@ -138,10 +139,17 @@ console.log(dataArray4)
 const dataArray5 = dataArray.slice(7, 8)
 console.log(dataArray5)
 // 2.6. Gauti devintą masyvo narį skaičiuojant nuo galo.
-
+const dataArray6 = dataArray.slice(-9, -8)
+console.log(dataArray6)
 // 2.7. Gauti vidurinį masyvo narį.
+const dataArray7 = dataArray.slice(13, 14)
+console.log(dataArray7)
 // 2.8. Gauti pirmus tris masyvo narius.
+const dataArray8 = dataArray.slice(0, 3)
+console.log(dataArray8)
 // 2.9. Gauti paskutinius tris masyvo narius.
+const dataArray9 = dataArray.slice(24, 27)
+console.log(dataArray9)
 // 2.10. Gauti pirmus 10 masyvo narius.
 // 2.11. Gauti paskutinius 10 masyvo narius.
 // 2.12. Gauti nuo 3 iki 8 masyvo nario (iš viso 6 nariai).
